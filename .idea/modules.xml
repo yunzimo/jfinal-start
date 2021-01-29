@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Elasticsearch-hello/Elasticsearch-hello.iml" filepath="$PROJECT_DIR$/Elasticsearch-hello/Elasticsearch-hello.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Jfinalblog/Jfinalblog.iml" filepath="$PROJECT_DIR$/Jfinalblog/Jfinalblog.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jFinal-withJar/jFinal-withJar.iml" filepath="$PROJECT_DIR$/jFinal-withJar/jFinal-withJar.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jfinal-helloworld/jfinal-helloworld.iml" filepath="$PROJECT_DIR$/jfinal-helloworld/jfinal-helloworld.iml" />
+    </modules>
+  </component>
+</project>

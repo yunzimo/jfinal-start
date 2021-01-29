@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测试页面</title>
+    <link rel="stylesheet" type="text/css" href="/user/easyui/themes/default/easyui.css">
+    <link rel="stylesheet" type="text/css" href="/user/easyui/themes/icon.css">
+    <link rel="stylesheet" type="text/css" href="/user/easyui/demo/demo.css">
+    <script type="text/javascript" src="/user/easyui/jquery.min.js"></script>
+    <script type="text/javascript" src="/user/easyui/jquery.easyui.min.js"></script>
+    <script type="text/javascript" src="/user/easyui/locale/easyui-lang-zh_CN.js"></script>
+</head>
+<body>
+    <h2>Nested Layout</h2>
+    <p>The layout region panel contains another layout or other components.</p>
+    <div style="margin:20px 0;"></div>
+    <div class="easyui-layout" style="width:700px;height:350px;">
+        <div data-options="region:'north'" style="height:50px"></div>
+        <div data-options="region:'south',split:true" style="height:50px;"></div>
+        <div data-options="region:'east',split:true" title="East" style="width:180px;"></div>
+        <div data-options="region:'west',split:true" title="West" style="width:100px;"></div>
+        <div data-options="region:'center',iconCls:'icon-ok'" title="Center">
+            <div class="easyui-layout" data-options="fit:true">
+                <div data-options="region:'north',split:true,border:false" style="height:50px"></div>
+                <div data-options="region:'west',split:true,border:false" title="wewe" style="width:100px"></div>
+                <div data-options="region:'center',border:false"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

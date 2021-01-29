@@ -1,0 +1,33 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="jfinal-helloworld:war exploded">
+    <output-path>$PROJECT_DIR$/jfinal-helloworld/target/jfinal-helloworld</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <exploded>true</exploded>
+        <module>jfinal-helloworld</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="jfinal-helloworld" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: com.jfinal:jfinal-undertow:2.4" />
+          <element id="library" level="project" name="Maven: io.undertow:undertow-core:2.0.33.Final" />
+          <element id="library" level="project" name="Maven: org.jboss.logging:jboss-logging:3.4.0.Final" />
+          <element id="library" level="project" name="Maven: org.jboss.xnio:xnio-api:3.3.8.Final" />
+          <element id="library" level="project" name="Maven: org.jboss.xnio:xnio-nio:3.3.8.Final" />
+          <element id="library" level="project" name="Maven: io.undertow:undertow-servlet:2.0.33.Final" />
+          <element id="library" level="project" name="Maven: javax.servlet:javax.servlet-api:4.0.1" />
+          <element id="library" level="project" name="Maven: com.jfinal:jfinal:4.9.06" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/jfinal-helloworld/target/jfinal-helloworld/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="jfinal-helloworld/web/Web" />
+    </root>
+  </artifact>
+</component>

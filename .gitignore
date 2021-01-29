@@ -1,0 +1,4 @@
+# Project exclude paths
+/jfinal-helloworld/target/
+/Jfinalblog/target/
+/out/

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>添加用户信息</title>
+    <link rel="stylesheet" type="text/css" href="/user/easyui/themes/default/easyui.css">
+    <link rel="stylesheet" type="text/css" href="/user/easyui/themes/icon.css">
+    <link rel="stylesheet" type="text/css" href="/user/easyui/demo/demo.css">
+    <script type="text/javascript" src="/user/easyui/jquery.min.js"></script>
+    <script type="text/javascript" src="/user/easyui/jquery.easyui.min.js"></script>
+    <script type="text/javascript" src="/user/easyui/locale/easyui-lang-zh_CN.js"></script>
+
+    <script type="text/javascript" src="/js/edit.js"></script>
+    <script type="text/javascript" src="/js/validator.js"></script>
+    <link rel="stylesheet" href="/plugins/kindeditor/themes/default/default.css">
+    <script charset="UTF-8" src="/plugins/kindeditor/kindeditor-all-min.js"></script>
+    <script charset="UTF-8" src="/plugins/kindeditor/lang/zh-CN.js"></script>
+
+    <script type="text/javascript" src="/plugins/ztree/js/jquery.ztree.all.min.js"></script>
+    <link rel="stylesheet" href="/plugins/ztree/css/zTreeStyle/zTreeStyle.css">
+</head>
+<body>
+
+    <form id="fm" method="post" novalidate style="margin:0;padding:20px 50px" content="text/html;charset=utf-8">
+        <h3>用户信息</h3>
+
+        <input id="id" name="user.id" type="hidden">
+        <div style="margin-bottom:10px">
+            <input name="user.name" class="easyui-textbox" required="true" label="姓名:" style="width:60%" validType="checkUsername[$('#id').val()]">
+        </div>
+        <div style="margin-bottom:10px">
+            <input id="pwd" name="user.pwd" class="easyui-textbox" required="true"  label="密码:" style="width:60%" data-options="validType:length[6,12]" >
+        </div>
+        <div style="margin-bottom:10px">
+            <input  class="easyui-textbox" required="true"  label="确认密码:" data-options="validType:['length[6,12]','equals']" style="width:60%">
+        </div>
+        <div style="margin-bottom:10px">
+            <input name="user.email" class="easyui-textbox" required="true"  label="邮箱:" style="width:60%" data-options="validType:['email','length[6,12]']">
+        </div>
+        <div style="margin-bottom:10px">
+            <input name="user.age" class="easyui-numberbox" required="true"  label="年龄:" style="width:60%">
+        </div>
+        <div style="margin-bottom:10px" >
+            性别：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input class="easyui-radiobutton"  name="user.sex" value="1" label="男:" labelWidth="30px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input class="easyui-radiobutton" name="user.sex" value="0" label="女:" labelWidth="30px" >
+        </div>
+        <div style="margin-bottom:10px">
+            <input name="user.birthday" class="easyui-datebox" data-options="editable:false" required="true"  label="生日:" style="width:60%">
+        </div>
+        备注：
+        <div style="margin-bottom:10px;margin-left: 70px">
+<!--            <textarea id="remark" name="user.remark" style="width:50px;height:100px;visibility:hidden;" ></textarea>-->
+            <input class="easyui-textbox" data-options="multiline:true" style="width:60%;height:100px">
+        </div>
+        <div id="dlg-buttons" style="text-align: center">
+            <a href="javascript:void(0)" class="easyui-linkbutton c6" iconCls="icon-ok" onclick="saveUser()" style="width:90px">保存</a>
+            <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-cancel" onclick="javascript:$('#dlg').dialog('close');" style="width:90px">取消</a>
+        </div>
+    </form>
+</body>
+</html>
+
+
+<!--富文本引入代码-->
+<!--<script type="text/javascript">-->
+
+<!--    var editor;-->
+<!--    KindEditor.ready(function(K) {-->
+<!--        editor = K.create('textarea[name="user.remark"]', {-->
+<!--            allowFileManager : true,-->
+<!--            resizeType:'0'-->
+<!--        });-->
+<!--    });-->
+
+<!--</script>-->
